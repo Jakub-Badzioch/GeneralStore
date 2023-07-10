@@ -1,0 +1,1 @@
+insert into Role (name) values ("ADMIN"), ("USER");

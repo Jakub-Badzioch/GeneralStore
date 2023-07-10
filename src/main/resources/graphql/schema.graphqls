@@ -1,0 +1,32 @@
+type ProductDTO {
+    id: Int
+    comments: [Comment]
+    name: String
+    price: Float
+    filePath: String
+    description: String
+    quantity: Int
+    scoreCount: Int
+    score: Float
+}
+type Comment {
+   score: Float
+   content: String
+}
+input ProductRequest {
+    id: Int
+    name: String
+    price: Float
+    filePath: String
+    description: String
+    quantity: Int
+    scoreCount: Int
+    score: Float
+}
+type Query {
+    getProduct(id: Int): ProductDTO
+    getComments: [Comment]
+}
+type Mutation {
+    save(productDTO: ProductRequest): ProductDTO
+}
